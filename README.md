@@ -186,7 +186,7 @@ This indexing will be similar for the multidimensional arrays as well.
 ### Basic Operations in the Arrays
 These operations are usually performed to either modify the data in the array or to report the status of the array.
 
-* Traverse − print all the array elements one by one.
+* [Traverse](/array/traversal.c) − print all the array elements one by one.
 * [Insertion](/array/insertion.c) − Adds an element at the given index.
 * [Deletion](/array/deletion.c) − Deletes an element at the given index.
 * Search − Searches an element using the given index or by the value.
