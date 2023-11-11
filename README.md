@@ -148,7 +148,7 @@ Few types of non-linear data structures are
 
 <hr>
 
-## Arrays
+# Arrays
 Array is a type of linear data structure that is defined as a collection of elements with same or different data types.<br>
 They exist in both single dimension and multiple dimensions.
 
@@ -192,6 +192,49 @@ These operations are usually performed to either modify the data in the array or
 * [Search](/array/search.c) − Searches an element using the given index or by the value.
 * [Update](/array/update.c) − Updates an element at the given index.
 * [Display](/array/display.c) − Displays the contents of the array.
+
+
+
+# Linked List
+A linked list is a collection of “nodes” connected together via links. 
+These nodes consist of the data to be stored and a pointer to the address of the next node within the linked list.
+Any amount of data can be stored in it and can be deleted from it.
+
+Types of Linked Lists
+* **Singly Link List** - The nodes only point to the address of the next node in the list
+* **Doubly Linked List** - The nodes point to the addresses of both previous and next nodes
+* **Circular Linked List** - The last node in the list will point to the first node on the list. It can either be singly linked or double linked.
+
+![](/images/linked_list_1.jpeg)
+
+### Singly Linked List
+Singly linked lists contain two “buckets” in one node; one bucket holds the data and the other bucket holds the address of the next node of the list. Traversals can be done in one direction only as there is only a single link between two nodes of the same list.
+<br>
+![](/images/singly_linked_lists.jpeg)
+
+
+### Doubly Linked Lists
+Doubly Linked Lists contain three “buckets” in one node; one bucket holds the data and the other buckets hold the addresses of the previous and next nodes in the list. The list is traversed twice as the nodes in the list are connected to each other from both sides.
+<br>
+![](/images/doubly_linked_lists.jpeg)
+
+### Circular Linked Lists
+Circular linked lists can exist in both singly linked list and doubly linked list.<br>
+Since the last node and the first node of the circular linked list are connected, the traversal in this linked list will go on forever until it is broken.
+<br>
+![](/images/circular_linked_lists.jpeg)
+
+
+### Basic Operations in the Linked Lists
+- Insertion − Adds an element at the beginning of the list.
+- Deletion − Deletes an element at the beginning of the list.
+- Display − Displays the complete list.
+- Search − Searches an element using the given key.
+- Delete − Deletes an element using the given key.
+
+
+
+
 
 
 
