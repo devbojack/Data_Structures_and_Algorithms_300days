@@ -1,4 +1,4 @@
- Data Structure and Algorithm
+ # Data Structure and Algorithm
 
 Data structures is the programmatic/system way of storing/organizing data so that data can be used efficiently.
 Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output.
@@ -191,7 +191,7 @@ These operations are usually performed to either modify the data in the array or
 * [Deletion](/array/deletion.c) − Deletes an element at the given index.
 * [Search](/array/search.c) − Searches an element using the given index or by the value.
 * [Update](/array/update.c) − Updates an element at the given index.
-* Display − Displays the contents of the array.
+* [Display](/array/display.c) − Displays the contents of the array.
 
 
 
