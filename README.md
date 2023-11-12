@@ -10,7 +10,8 @@ Include:
 * user defined data types - Structure, union and enumeration.
 
 ### Abstract Data Types
-They are simillar to `user defined data` types which defines operations on values using functions without specifying what is there inside the function and how the operations are performed. <br>
+They are simillar to `user defined data` types which defines operations on values using functions without specifying what is there inside the function and how the operations are performed (ABSTRACTION). <br>
+
 **Example**
     Stack - Consists of elements of same type arranged in a sequential order
 
@@ -32,10 +33,68 @@ The program which implements the data structure is known as the `implementation`
 - The user can use the Operations without knowing its implementation
 - The client program will work the same without being affected when an implementation is changed.
 
-Data structures is the programmatic/system way of storing/organizing data so that data can be used efficiently.
-Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output.
+_______________________________
 
-Categories of algorithm
+**Data structures** is the programmatic/system way of storing/organizing data so that data can be used efficiently.
+Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output.<br>
+A `data structure` is used to implement an `Abstract Data Type`
+
+`ADT` tells us **what** ***(BLUEPRINT)***is to be done and `data structures` tells us **how** ***(IMPLEMENTATION)*** to do it.<br>
+Different implementations of ADT are compared for time and space efficiency. The one best suited according to the current requirement wof the user will be selected.<br>
+
+**Advantages of Data Structure**
+* Efficiency - Proper choice of data strcutures make program efficient in terms of space and time
+* Reusability - One implementation can be used by multiple client programs
+* Abstraction - Data structure is specified by an ADT which provides a level of abstraction. The client program doesn't have to worry about the implementation details.
+
+
+#### Types of Data Structure
+* **Linear Data Structures** - 
+    All elements are arranged in a linear (sequential) order
+
+* **Non-Linear Data Structures**
+    All elements are not arranged in a linear (sequantial) order. There is no linear arrangements of the elements. Example: Tree, Graph
+
+- **Static Data Structures**
+    Memory is allocated at compile time. Maximum size is fixed. Example: Array<br>
+    ***Advantages***: Fast access. <br>
+    ***Disadvantages***: Slower insertion and deletion.
+
+- **Dynamic Data Strcuture**
+    Memory is allocated at run time. Maximum size is flexible. Example: Linked List <br>
+    ***Advantages***: Faster insertion and deletion
+    ***Disadvantages***: Slower access
+
+#### Asymptotic Analysis.
+Efficiency of data structures is always measures in terms of **TIME** and **SPACE**<br>
+
+We compare the time complexity of the data structure on the basis of operations performed on them.<br>
+**Example:** Inserting an element at the beginning of the list is way faster in the `linked list` than `arrays`.
+
+**NOTE**
+- Measuring the actual running time is not practical at all
+- The running time generally depends on the **size of the input** <br>
+Therefore, if the size of the input is n, then f(n) is a funciton of n denotes the `time complexity`. In other words, f(n) represents the number of instructions for the input value n.<br>
+We can compare two data structures for a particular operation by comparing their f(n) values. We are interested in growth rate of f(n) with respect to n because it might be possible that for smaller input size, one data strcuture may seem better than the other but for larger input size it may not.<br>
+This concept is application in caomparing the two algorithms as well.
+
+**Example**<br>
+
+> f(n) = 5n<sup>2</sup> + 6n + 12
+
+| | | | |
+|-|-|-|-|
+|n|5n<sup>2</sup>|6n|12|
+|1|21.74%|26.09%|52.17%|
+|10|87.41%|10.49%|2.09%|
+|100|98.79%|1.19%|0.02%|
+|1000|99.88%|0.12%|0.0002%|
+| | | | |
+
+![](/images/f(n).png)
+
+
+**Categories of algorithm**
 - Search
 - Sort
 - Insert
