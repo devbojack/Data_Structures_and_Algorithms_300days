@@ -1,5 +1,37 @@
  # Data Structure and Algorithm
 
+### Data Type
+1. Defines a certain **domain** of values
+2. Defines **Operations** allowed on those values
+    - Example: Allowed Operations on floating point values are addition, subtraction, multiplication, division, etc. Bitwise and % operations are not allowed.
+
+Include: 
+* Primitive data types - integers, char, etc..
+* user defined data types - Structure, union and enumeration.
+
+### Abstract Data Types
+They are simillar to `user defined data` types which defines operations on values using functions without specifying what is there inside the function and how the operations are performed. <br>
+**Example**
+    Stack - Consists of elements of same type arranged in a sequential order
+
+**Operations:**
+* initialize()
+* Push()
+* Pop()
+* isEmpty()
+* isFull()
+
+**NOTE:** There are multiple ways to implement an Abstract Data Type (ADT)<br>
+    Example: A stack ADT can be implemented using `arays` or `linked lists`.
+
+**Why use adt?**<br>
+The program with uses data structure is called a `client` program. <br>
+The `client` has access to the ADT, i.e. interfece. <br>
+The program which implements the data structure is known as the `implementation`.
+
+- The user can use the Operations without knowing its implementation
+- The client program will work the same without being affected when an implementation is changed.
+
 Data structures is the programmatic/system way of storing/organizing data so that data can be used efficiently.
 Algorithm is a step-by-step procedure, which defines a set of instructions to be executed in a certain order to get the desired output.
 
@@ -226,7 +258,7 @@ Since the last node and the first node of the circular linked list are connected
 
 
 ### Basic Operations in the Linked Lists
-- Insertion − Adds an element at the beginning of the list.
+- [Insertion](/linked_list/insertion.c) − Adds an element at the beginning of the list.
 - Deletion − Deletes an element at the beginning of the list.
 - Display − Displays the complete list.
 - Search − Searches an element using the given key.
