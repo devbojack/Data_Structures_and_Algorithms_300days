@@ -93,6 +93,15 @@ This concept is application in caomparing the two algorithms as well.
 
 ![](/images/f(n).png)
 
+It is a clear observation that for larger values of n, the squared term consumes almost 99% of the time, so there is no harm if we can eliminate the rest of the terms as they are not contributing much of the time.<br>
+**Hence:**
+> f(n) = 5n<sup>2</sup>
+
+We are getting the approximate time complexity and we are satisfies with the results because this approximate result is very near to the actual result. <br>
+This approximate measure of time complexity is called **Asymptotic Complexity**
+
+
+____________________________________
 
 **Categories of algorithm**
 - Search
