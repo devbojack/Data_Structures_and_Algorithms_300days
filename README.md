@@ -184,6 +184,68 @@ Big O notation helps us in finding the growth rate of the function without plugg
 It gives the least upper bound on the function which gives the surety that the function under consideration will never grow faster than this upper bound. The least upper bound tells how worst an algorithm can perform.<br>
 Big O notation simplifies tasks. It elminates all the unnecessary terms from the function which are not contribting much in the overall running time.
 
+### Growth Rate of Standard Functions
+
+| n | | | | g(n)| | |
+| - |-|-|-|-|-|-|
+| n | log<sub>2</sub>n | n | nlog<sub>2</sub>n | n<sup>2</sup> | n<sup>3</sup> | 2<sup>n</sup> |
+| 1 | 0 | 1 | 0 | 1  | 1  | 2 |
+| 2 | 1 | 2 | 2 | 4 | 8 | 4 |
+| 4 | 2 | 4 | 8 | 16 | 64 | 16 |
+| 8 | 3 | 8 | 24 | 64 | 512 | 256 |
+| 16 | 4 | 16 | 64 | 256 | 4096 | 65536 |
+| 32 | 5 | 32 | 160 | 1024 | 32768 | 429*10<sup>7</sup> |
+| | | | | | | |
+
+
+
+### Guidelines to Asymptotic Analysis
+| | |
+|-|-|
+| Loops | O(n) |
+| Nested Loops |  O(n<sup>2</sup>) |
+| Consecutive Statements |  O(n<sup>2</sup>) |
+| if-then-else statement| O(n) |
+| Logarithm Complexity (eg. log<sub>2</sub>8 = 3)| O(log<sub>2</sub>n) |
+| | |
+
+
+**NOTE:** Logarithmic time complexity is achieved when the problem size is cut down by a fraction.
+
+> (k-1=log<sub>2</sub>n)   =   (k=log<sub>2</sub>n + 1)
+
+<br>
+<br>
+
+**Problem 1**
+Finding the time complexity of: 
+
+```
+void fun(int n)
+{
+    int i, j, k, count = 0;
+    
+    for (i = n/2; i <= n; i++)
+        for (j = 1; j+n/2 < n; j++>)
+            for (k = 1; k <= n; k = k*2)
+                count++
+}
+```
+> line 1: O(1) <br>
+> line 2: (k - 1 = n - n/2) => (k - 1 = (2n - n)/2) => (k = n/2 + 1) => O(n) <br>
+> line 3: (j <= n - n/2 = n/2) => (j = k = n/2) => (k = n/2) => O(n) <br>
+> line 4: (k = 2<sup>p-1</sup> = n) => (n = 2<sup>p-1</sup>) => (p - 1 = log<sub>2</sub>n) => (p = log<sub>2</sub> n + 1) => O(logn)
+
+Solution
+
+> n * n * logn = O(n<sup>2</sup>logn)
+
+
+
+
+
+
+
 
 ____________________________________
 
