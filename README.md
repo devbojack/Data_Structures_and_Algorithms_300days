@@ -100,6 +100,90 @@ It is a clear observation that for larger values of n, the squared term consumes
 We are getting the approximate time complexity and we are satisfies with the results because this approximate result is very near to the actual result. <br>
 This approximate measure of time complexity is called **Asymptotic Complexity**
 
+## Big O notation
+Big O notation is used to measure the performance of any algorithm by providing the **order of growth of the function**.<br>
+It gives the upper bound of a function by which we can make sure that the function will never grow faster than this upper bound. <br>
+We want the `approximate runtime`, not the exact runtime, of the operations performed on data structures.
+
+If `f(n)` and `g(n)` are the 2 functions,then <br>
+> f(n) = O(g(n))
+
+if and only if, there exists constants c and n<sub>o</sub> such that 
+> f(n) <= c.g(n)
+
+for all n >= n<sub>o</sub>
+
+This simply means that `f(n)` does not grow faster than `g(n)`
+
+<br>
+
+**Example 1**<br>
+_______________________
+
+```math
+f(n) = n
+g(n) = 2n
+```
+
+Is **`f(n) = O(g(n))`** ? <br>
+`f(n) <= c.g(n)` <br>
+Take <br>
+> c = 1 and n<sub>o</sub> = 1
+
+then <br>
+
+> n <= c.2n
+
+_________________________
+
+<br>
+
+**Example 2**<br>
+_________________________
+```math
+f(n) = 4n + 3
+g(n) = n
+```
+Is **`f(n) = O(g(n))`** ? <br>
+`f(n) <= c.g(n)` <br>
+
+> 4n+3 <= c.n
+
+Take <br>
+> c = 5
+
+then <br>
+
+```math
+4n+3 <= 5n
+3 <= 5n - 4n
+n >= 3
+```
+Therefore; `f(n) <= c.g(n)` for all `n >= 3` where ***c = 5 and n<sub>o</sub> = 3***
+
+_________________________
+
+| | | |
+|-|-|-|
+| n | f(n)| g(n) |
+| 1 | 7 | 5 |
+| 2 | 11 | 10 |
+| 3 | 15 | 15 |
+| 4 | 19 | 20 |
+| 5 | 23 | 25 |
+| 6 | 27 | 30 |
+| 7 | 31 | 35 |
+| 8 | 35 | 40 |
+| 9 | 39 | 45 |
+| | | |
+
+
+![](/images/bigo-linear.png)
+
+Big O notation helps us in finding the growth rate of the function without plugging in different values of n<br>
+It gives the least upper bound on the function which gives the surety that the function under consideration will never grow faster than this upper bound. The least upper bound tells how worst an algorithm can perform.<br>
+Big O notation simplifies tasks. It elminates all the unnecessary terms from the function which are not contribting much in the overall running time.
+
 
 ____________________________________
 
